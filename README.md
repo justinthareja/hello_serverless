@@ -17,6 +17,12 @@ This template demonstrates how to deploy a NodeJS function running on AWS Lambda
 
 ## Usage
 
+### Init
+For now node_modules is included in lambda src for to enable pug. Need to figure out how to remove this. Run this just once to generate external dependencies:
+```bash
+$ npm run init
+```
+
 ### Build
 In order to build and deploy the compiled html, you need to run the following command:
 

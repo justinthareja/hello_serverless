@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "sls deploy",
-    "deploy": "sls invoke -f \"function1\""
+    "deploy": "sls invoke -f \"function1\"",
+    "init": "npm install"
   },
   "author": "",
   "license": "ISC",
