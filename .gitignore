@@ -1,0 +1,6 @@
+.DS_STORE
+.serverless
+serverless_sdk
+
+# TODO: can i remove node_modules from aws lambda src?
+node_modules

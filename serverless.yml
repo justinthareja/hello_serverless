@@ -1,0 +1,24 @@
+org: justinthareja
+app: gh-aws-dashboard-2
+service: gh-aws-dashboard-2
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+  iam:
+  # configure the role that will be created by Serverless (simplest):
+    role:
+      # Add statements to the IAM role to give permissions to Lambda functions
+      statements:
+        - Effect: Allow
+          Action:
+            - 's3:PutObject'
+          Resource:
+            - "arn:aws:s3:::${file(config.json):S3_BUCKET_NAME}"
+            - "arn:aws:s3:::${file(config.json):S3_BUCKET_NAME}/*"
+
+functions:
+  function1:
+    handler: index.handler
